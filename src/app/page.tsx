@@ -1,9 +1,14 @@
-import Image from "next/image";
+import { About, Contact, Experience, Globe, Projects, Skills } from "@/components";
 
 export default function Home() {
   return (
-    <div>
-      Hello
-    </div>
+    <main className="h-screen snap-y snap-mandatory overflow-y-scroll">
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Globe />
+        {/* <Contact /> */}
+    </main>
   );
 }
