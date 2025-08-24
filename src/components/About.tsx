@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Socials from './Socials';
 import FloatingButtons from './FloatingButtons';
 
-const lineClassName = 'inline-block border-1 border-pink max-w-[600px] h-4 shadow-sm shadow-pink';
+export const lineClassName = 'inline-block border-1 border-pink max-w-[600px] h-4 shadow-sm shadow-pink';
 
 const About = () => {
   return (
@@ -27,12 +27,6 @@ const About = () => {
             I am Sunny
           </p>
         </div>
-      </div>
-      <div className="socials">
-        <Socials />
-      </div>
-      <div>
-        <FloatingButtons />
       </div>
     </section>
   );
