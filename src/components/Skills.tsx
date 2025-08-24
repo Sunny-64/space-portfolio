@@ -39,7 +39,7 @@ const Skills = () => {
             Here is a list of my skills
           </p>
 
-          <div className="w-1/2 grid grid-cols-4 gap-2 mx-auto">
+          <div className="w-full sm:w-1/2 px-14 sm:px-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mx-auto">
             {SKILLS.map((skill) => (
               <span key={skill} className="border-2 border-pink px-6 py-4 text-lg bg-black/20 rounded-sm z-50">
                 {skill}
