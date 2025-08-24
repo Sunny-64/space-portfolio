@@ -2,7 +2,7 @@ import { About, Contact, Experience, Globe, Projects, Skills } from "@/component
 
 export default function Home() {
   return (
-    <main className="h-screen snap-y snap-mandatory overflow-y-scroll">
+    <main className="h-screen">
         <About />
         <Skills />
         <Projects />
