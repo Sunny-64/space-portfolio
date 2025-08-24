@@ -23,7 +23,7 @@ const SKILLS = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="h-screen">
+    <section id="skills" className="h-screen snap-start">
       <Image className="object-cover opacity-70" src={'/assets/frame-2.png'} alt="frame-2" fill />
       <div className="">
         <div className="text-white pt-20 text-center w-full">

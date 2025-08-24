@@ -2,12 +2,12 @@ import { About, Contact, Experience, FloatingButtons, Globe, Projects, Skills, S
 
 export default function Home() {
   return (
-    <main className="h-screen">
+    <main className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth relative">
+        <Globe />
         <About />
         <Skills />
         <Projects />
         <Experience />
-        <Globe />
         <Socials />
         <FloatingButtons />
         {/* <Contact /> */}

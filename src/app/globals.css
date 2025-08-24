@@ -20,6 +20,22 @@ body {
 section {
   position: relative;
 }
+/* 
+#about {
+  background: url('/assets/frame-1.png') center/cover no-repeat;
+}
+
+#skills {
+  background: url('/assets/frame-2.png') center/cover no-repeat;
+}
+
+#experience {
+  background: url('/assets/frame-4.png') center/cover no-repeat;
+}
+
+#projects {
+  background: url('/assets/frame-3.png') center/cover no-repeat;
+} */
 
 .neon-text {
   -webkit-text-stroke: 2px #fff;

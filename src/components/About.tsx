@@ -1,13 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
-import Socials from './Socials';
-import FloatingButtons from './FloatingButtons';
+import Image from "next/image";
 
 export const lineClassName = 'inline-block border-1 border-pink max-w-[600px] h-4 shadow-sm shadow-pink';
 
 const About = () => {
   return (
-    <section id="about" className="h-screen relative px-2 sm:px-4">
+    <section id="about" className="h-screen relative px-2 sm:px-4 snap-start">
       <Image className="object-cover pointer-events-none opacity-70" src={'/assets/frame-1.png'} alt="frame-1" fill />
       <div className="z-50">
         <div className="text-white pt-20 text-center w-full">
