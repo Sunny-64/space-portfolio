@@ -4,39 +4,36 @@ import Image from 'next/image';
 import { useActiveSection } from '@/hooks/useActiveSection';
 
 const SECTIONS = ['about', 'skills', 'projects', 'experience', 'socials'] as const;
+type Section = (typeof SECTIONS)[number];
 
 const Globe = () => {
   const rotationRef = useRef(0);
-  const prevSectionRef = useRef<string | null>(null);
+  const prevSectionRef = useRef<Section | null>(null);
 
-  // Keep the same order for the hook and for index math
-  const activeSection = useActiveSection([...SECTIONS]);
+  // Tell TS what useActiveSection returns
+  const activeSection = useActiveSection([...SECTIONS]) as Section | null;
 
   useEffect(() => {
     if (!activeSection) return;
 
-    // Initialize on first render
     if (prevSectionRef.current === null) {
       prevSectionRef.current = activeSection;
       return;
     }
 
-    const from = SECTIONS.indexOf(prevSectionRef.current as any);
-    const to = SECTIONS.indexOf(activeSection as any);
+    const from = SECTIONS.indexOf(prevSectionRef.current);
+    const to = SECTIONS.indexOf(activeSection);
 
     if (from === -1 || to === -1 || from === to) {
       prevSectionRef.current = activeSection;
       return;
     }
 
-    // Positive delta -> scrolling down (later in array) => anticlockwise (-90)
-    // Negative delta -> scrolling up (earlier in array) => clockwise (+90)
     const delta = to - from;
     const steps = Math.abs(delta);
     const perStep = delta > 0 ? +90 : -90;
 
     rotationRef.current += perStep * steps;
-    // normalize to [0, 360)
     rotationRef.current = ((rotationRef.current % 360) + 360) % 360;
 
     const globe = document.querySelector<HTMLElement>('.globe-img');

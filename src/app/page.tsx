@@ -1,4 +1,4 @@
-import { About, Contact, Experience, FloatingButtons, Globe, Projects, Skills, Socials } from "@/components";
+import { About, Experience, FloatingButtons, Globe, Projects, Skills, Socials } from "@/components";
 
 export default function Home() {
   return (
