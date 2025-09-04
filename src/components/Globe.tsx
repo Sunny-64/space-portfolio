@@ -33,7 +33,7 @@ const Globe = () => {
     // Negative delta -> scrolling up (earlier in array) => clockwise (+90)
     const delta = to - from;
     const steps = Math.abs(delta);
-    const perStep = delta > 0 ? -90 : +90;
+    const perStep = delta > 0 ? +90 : -90;
 
     rotationRef.current += perStep * steps;
     // normalize to [0, 360)
@@ -41,7 +41,7 @@ const Globe = () => {
 
     const globe = document.querySelector<HTMLElement>('.globe-img');
     if (globe) {
-      globe.style.transform = `rotate(${rotationRef.current}deg)`;
+      globe.style.transform = `rotate(${-rotationRef.current}deg)`;
     }
 
     prevSectionRef.current = activeSection;
